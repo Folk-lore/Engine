@@ -1,0 +1,11 @@
+<div id="myDiv"></div>
+
+<script src="StoryCreator/story_creator.js"></script>
+
+<script>
+    document.getElementById('myDiv').appendChild(StoryCreator(createStory))
+
+    function createStory(jsonData) {
+        alert(jsonData);
+    }
+</script>
