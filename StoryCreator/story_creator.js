@@ -13,7 +13,7 @@ const HOME_CLASS = "homeClass";
 const CANVAS_ID = "canvas";
 const CANVAS_CLASS = "canvasClass";
 
-const STORY_FORM_TITLE_CONTAINER_CLASS = "nameContainer";
+const STORY_FORM_TITLE_CONTAINER_CLASS = "titleContainer";
 const STORY_FORM_TITLE_INPUT_NAME = "title";
 const STORY_FORM_TITLE_INPUT_ID = "storyTitleID";
 const STORY_FORM_TITLE_INPUT_CLASS = "storyTitleInputClass";
@@ -69,7 +69,7 @@ function appendMetadata(metadataDiv, storyForm, createStory) {
 
 function appendNameInput(div) {
     var nameInputParent = createLabelTextInputPair(
-        STORY_FORM_TITLE_LABEL_TEXTSTORY_FORM_TITLE_CONTAINER_CLASS,
+        STORY_FORM_TITLE_CONTAINER_CLASS,
         STORY_FORM_TITLE_INPUT_NAME,
         STORY_FORM_TITLE_INPUT_ID,
         STORY_FORM_TITLE_INPUT_CLASS,
