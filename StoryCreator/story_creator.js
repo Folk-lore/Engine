@@ -13,19 +13,19 @@ const HOME_CLASS = "homeClass";
 const CANVAS_ID = "canvas";
 const CANVAS_CLASS = "canvasClass";
 
-const STORY_FORM_NAME_CONTAINER_CLASS = "nameContainer";
-const STORY_FORM_NAME_INPUT_NAME = "Name";
-const STORY_FORM_NAME_INPUT_ID = "storyNameID";
-const STORY_FORM_NAME_INPUT_CLASS = "storyNameInputClass";
-const STORY_FORM_NAME_LABEL_CLASS = "storyNameLabelClass";
-const STORY_FORM_NAME_LABEL_TEXT = "Name";
+const STORY_FORM_TITLE_CONTAINER_CLASS = "nameContainer";
+const STORY_FORM_TITLE_INPUT_NAME = "title";
+const STORY_FORM_TITLE_INPUT_ID = "storyTitleID";
+const STORY_FORM_TITLE_INPUT_CLASS = "storyTitleInputClass";
+const STORY_FORM_TITLE_LABEL_CLASS = "storyTitleLabelClass";
+const STORY_FORM_TITLE_LABEL_TEXT = "Title";
 
-const STORY_FORM_DESCRIPTION_CONTAINER_CLASS = "descriptionContainer";
-const STORY_FORM_DESCRIPTION_NAME = "description";
-const STORY_FORM_DESCRIPTION_ID = "desriptionId";
-const STORY_FORM_DESCRIPTION_CLASS = "desriptionClass";
-const STORY_FORM_DESCRIPTION_LABEL_CLASS = "desriptionLabelClass";
-const STORY_FORM_DESCRIPTION_LABEL_TEXT = "Description";
+const STORY_FORM_SUMMARY_CONTAINER_CLASS = "summaryContainer";
+const STORY_FORM_SUMMARY_NAME = "summary";
+const STORY_FORM_SUMMARY_ID = "summaryId";
+const STORY_FORM_SUMMARY_CLASS = "summaryClass";
+const STORY_FORM_SUMMARY_LABEL_CLASS = "summaryLabelClass";
+const STORY_FORM_SUMMARY_LABEL_TEXT = "Summary";
 
 const STORY_FORM_CREATE_BUTTON_ID = "btnCreate";
 const STORY_FORM_CREATE_BUTTON_CLASS = "btnCreate";
@@ -69,31 +69,31 @@ function appendMetadata(metadataDiv, storyForm, createStory) {
 
 function appendNameInput(div) {
     var nameInputParent = createLabelTextInputPair(
-        STORY_FORM_NAME_CONTAINER_CLASS,
-        STORY_FORM_NAME_INPUT_NAME,
-        STORY_FORM_NAME_INPUT_ID,
-        STORY_FORM_NAME_INPUT_CLASS,
-        STORY_FORM_NAME_LABEL_CLASS,
-        STORY_FORM_NAME_LABEL_TEXT
+        STORY_FORM_TITLE_LABEL_TEXTSTORY_FORM_TITLE_CONTAINER_CLASS,
+        STORY_FORM_TITLE_INPUT_NAME,
+        STORY_FORM_TITLE_INPUT_ID,
+        STORY_FORM_TITLE_INPUT_CLASS,
+        STORY_FORM_TITLE_LABEL_CLASS,
+        STORY_FORM_TITLE_LABEL_TEXT
     );
     div.appendChild(nameInputParent);
 }
 
 function appendTextareaLabel(div) {
     var textAreaLabelParent = createTextareaLabelPair(
-        STORY_FORM_DESCRIPTION_CONTAINER_CLASS,
-        STORY_FORM_DESCRIPTION_NAME,
-        STORY_FORM_DESCRIPTION_ID,
-        STORY_FORM_DESCRIPTION_CLASS,
-        STORY_FORM_DESCRIPTION_LABEL_CLASS,
-        STORY_FORM_DESCRIPTION_LABEL_TEXT,
+        STORY_FORM_SUMMARY_CONTAINER_CLASS,
+        STORY_FORM_SUMMARY_NAME,
+        STORY_FORM_SUMMARY_ID,
+        STORY_FORM_SUMMARY_CLASS,
+        STORY_FORM_SUMMARY_LABEL_CLASS,
+        STORY_FORM_SUMMARY_LABEL_TEXT,
         false
     );
     div.appendChild(textAreaLabelParent);
 }
 
 function appendTextarea(storyForm, readOnly, data) {
-    var nameInputParent = createTextarea("name", "id", "className", readOnly, data);
+    var nameInputParent = createTextarea("content", "contentId", "contentClass", readOnly, data);
 
     storyForm.appendChild(nameInputParent);
 }
